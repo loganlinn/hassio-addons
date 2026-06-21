@@ -47,4 +47,3 @@ schema:
   upstream_tls_trust_pool_file: str?
   upstream_tls_insecure_skip_verify: bool
   use_custom_caddyfile: bool
-

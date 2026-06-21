@@ -20,4 +20,3 @@ https://github.com/loganlinn/hassio-addons
 ```
 
 Then install the add-on from the Home Assistant add-on store.
-

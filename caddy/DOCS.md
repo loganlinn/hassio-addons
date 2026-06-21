@@ -114,4 +114,3 @@ dig @8.8.8.8 TXT _acme-challenge.internal.llinn.dev +short
 If Cloudflare creates the TXT record but Caddy still times out, check
 `acme_dns_resolvers`. If the TXT record never appears, check the Cloudflare API
 token scope and zone.
-

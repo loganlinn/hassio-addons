@@ -1,10 +1,14 @@
-amends "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Config.pkl"
-import "package://github.com/jdx/hk/releases/download/v1.45.0/hk@1.45.0#/Builtins.pkl"
+amends "package://github.com/jdx/hk/releases/download/v1.48.0/hk@1.48.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.48.0/hk@1.48.0#/Builtins.pkl"
 
 local linters = new Mapping<String, Step> {
   ["shellcheck"] = (Builtins.shellcheck) {}
   ["shfmt"] = (Builtins.shfmt) {}
+  ["pkl-format"] = (Builtins.pkl_format) {}
+  ["oxfmt"] = (Builtins.oxfmt) {}
 }
+
+exclude = List(".agent/skills")
 
 hooks {
   ["pre-commit"] {

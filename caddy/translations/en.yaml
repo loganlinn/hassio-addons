@@ -36,4 +36,3 @@ configuration:
   use_custom_caddyfile:
     name: Use custom Caddyfile
     description: Read /share/caddy/Caddyfile instead of generating one.
-
