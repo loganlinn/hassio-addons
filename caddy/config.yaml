@@ -1,0 +1,50 @@
+---
+name: Internal Caddy
+version: 0.1.0
+slug: internal_caddy
+description: Caddy reverse proxy for internal wildcard HTTPS services
+url: https://github.com/loganlinn/hassio-addons/tree/main/caddy
+stage: experimental
+init: false
+arch:
+  - aarch64
+  - amd64
+startup: services
+boot: auto
+ports:
+  80/tcp: null
+  443/tcp: 443
+ports_description:
+  80/tcp: Optional HTTP redirect port
+  443/tcp: HTTPS ingress
+map:
+  - type: share
+    read_only: false
+watchdog: tcp://[HOST]:[PORT:443]
+options:
+  log_level: info
+  cloudflare_api_token: ""
+  public_domain: internal.llinn.dev
+  backend_domain: internal
+  backend_port: 443
+  upstream_dns_resolvers: 192.168.1.1
+  acme_dns_resolvers: 1.1.1.1 1.0.0.1
+  acme_propagation_timeout: 10m
+  acme_email: ""
+  upstream_tls_trust_pool_file: ""
+  upstream_tls_insecure_skip_verify: false
+  use_custom_caddyfile: false
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  cloudflare_api_token: password
+  public_domain: str
+  backend_domain: str
+  backend_port: port
+  upstream_dns_resolvers: str
+  acme_dns_resolvers: str
+  acme_propagation_timeout: str
+  acme_email: str?
+  upstream_tls_trust_pool_file: str?
+  upstream_tls_insecure_skip_verify: bool
+  use_custom_caddyfile: bool
+

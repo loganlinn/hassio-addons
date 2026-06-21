@@ -1,0 +1,39 @@
+---
+configuration:
+  log_level:
+    name: Log level
+    description: The amount of logging the add-on should emit.
+  cloudflare_api_token:
+    name: Cloudflare API token
+    description: API token Caddy uses for ACME DNS-01 challenges.
+  public_domain:
+    name: Public domain
+    description: Wildcard DNS suffix served by Caddy.
+  backend_domain:
+    name: Backend domain
+    description: Local DNS suffix used for upstream services.
+  backend_port:
+    name: Backend port
+    description: HTTPS port used by upstream services.
+  upstream_dns_resolvers:
+    name: Upstream DNS resolvers
+    description: DNS resolvers used for local upstream service lookup.
+  acme_dns_resolvers:
+    name: ACME DNS resolvers
+    description: Public DNS resolvers used for DNS challenge propagation checks.
+  acme_propagation_timeout:
+    name: ACME propagation timeout
+    description: How long Caddy waits for DNS challenge propagation.
+  acme_email:
+    name: ACME email
+    description: Optional email address for the ACME account.
+  upstream_tls_trust_pool_file:
+    name: Upstream trust pool file
+    description: Optional PEM CA bundle used to verify upstream TLS certificates.
+  upstream_tls_insecure_skip_verify:
+    name: Skip upstream TLS verification
+    description: Disables upstream TLS verification. Prefer a trust pool file.
+  use_custom_caddyfile:
+    name: Use custom Caddyfile
+    description: Read /share/caddy/Caddyfile instead of generating one.
+
