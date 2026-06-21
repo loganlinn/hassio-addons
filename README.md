@@ -1,4 +1,4 @@
-# Home Assistant add-ons
+# loganlinn's Home Assistant Add-ons
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
